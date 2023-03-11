@@ -1,19 +1,85 @@
-img{
-    display: none;
-}
+
 input[value="mem1"]:checked ~ .mem1 {
     display: block;
+    transform: scale(1);
+
 }
 input[value="mem2"]:checked ~ .mem2 {
     display: block;
-}
-input[value="mem3"]:checked ~ .mem3 {
-    display: block;
+    transform: scale(1);
+    
 }
 
+input[value="mem3"]:checked ~ .mem3 {
+    display: block;
+
+    transform: scale(1);
+}
+input[value="mem4"]:checked ~ .mem4 {
+    display: block;
+
+    transform: scale(1);
+}
+input{
+    display: none;
+}
+.block{
+    margin: 2vw 5vh;
+}
 .block__select{
-    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #b2b2b2;
-    margin: 10px;
-    padding: 20px 40px;
+    margin: 1vw 1vh;
+    
+    transition: height 5s;
+    
+}
+.select{
+    padding: 1vw 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.arrow{
+    width: 15px;
+    height: 15px;
+    background: url(img/arrow.svg) no-repeat 50% 50%;
+    transition: all 1s;
+}
+p{
+    margin: 0;
+}
+legend{
+    font-size: 1.5rem;
+}
+.dangerous{
+    color: red;
+    font-weight: bolder;
+}
+
+.mem{
+    display: none;
+    transform: scale(0.2);
+    margin: 2vh 2vw;
+    filter: blur(0.2rem);
+    transition: transform 2s;
+    
+}
+input[value="mem2"]:checked ~ label[for="mem2"] > .arrow{
+    transform: rotate(180deg);
+}
+input[value="mem1"]:checked ~ label[for="mem1"] > .arrow{
+    transform: rotate(180deg);
+}
+input[value="mem3"]:checked ~ label[for="mem3"] > .arrow{
+    transform: rotate(180deg);
+}
+input[value="mem4"]:checked ~ label[for="mem4"] > .arrow{
+    transform: rotate(180deg);
+}
+.mem:hover{
+    filter: blur(0);
 }
