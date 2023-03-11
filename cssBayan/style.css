@@ -61,6 +61,8 @@ legend{
 }
 
 .mem{
+    overflow: hidden;
+    width: calc(100% - 4vw);
     display: none;
     transform: scale(0.2);
     margin: 2vh 2vw;
