@@ -1,6 +1,19 @@
 img{
     display: none;
 }
-input[value="mem1"]:checked > .mem1 {
+input[value="mem1"]:checked ~ .mem1 {
     display: block;
+}
+input[value="mem2"]:checked ~ .mem2 {
+    display: block;
+}
+input[value="mem3"]:checked ~ .mem3 {
+    display: block;
+}
+
+.block__select{
+    min-height: 50px;
+    background-color: #b2b2b2;
+    margin: 10px;
+    padding: 20px 40px;
 }
