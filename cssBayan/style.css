@@ -1,0 +1,6 @@
+img{
+    display: none;
+}
+input[value="mem1"]:checked > .mem1 {
+    display: block;
+}
